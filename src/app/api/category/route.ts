@@ -6,9 +6,6 @@ export async function GET() {
     const data = await getTechnologyOptions();
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json(
-      { error: "Failed to fetch posts" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
