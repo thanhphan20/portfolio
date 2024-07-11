@@ -37,7 +37,7 @@ const Hero = forwardRef((props, ref) => {
       id="home"
       className="h-screen flex flex-col gap-36 -mt-[5%] justify-center px-[10%]"
     >
-      <div className="grid-gap spacing flex grid-cols-2 flex-col md:grid">
+      <div className="flex flex-row gap-8">
         <article className="">
           <h2 className="text-2xl md:text-4xl 2xl:text-5xl" data-fade="1">
             Hi!
@@ -74,7 +74,7 @@ const Hero = forwardRef((props, ref) => {
             </div>
             <a
               className="inline-flex rounded px-4 py-2 font-bold border border-gray-300 shadow-sm dark:border-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-primary-300 scale-100 hover:scale-[1.03] active:scale-[0.97] motion-safe:transform-gpu motion-reduce:hover:scale-100 motion-reduce:hover:brightness-90 transition duration-100 animate-shadow bg-white text-gray-800 disabled:bg-gray-200 dark:bg-dar dark:disabled:bg-gray-700"
-              href="/#about"
+              href="/about"
             >
               Learn more about me
             </a>
@@ -86,7 +86,7 @@ const Hero = forwardRef((props, ref) => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="../../public/cv.pdf"
+              href="../../cv.pdf"
               className="inline-flex items-center gap-1 text-sm font-medium md:text-base text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white focus:outline-none focus-visible:ring focus-visible:ring-primary-300 transition-colors cursor-newtab"
             >
               <svg
@@ -160,7 +160,7 @@ const Hero = forwardRef((props, ref) => {
           </div>
         </article>
         <div
-          className="relative rounded-md min-h-96"
+          className="relative rounded-md"
           style={{
             backgroundImage: `url("/avatar.png")`,
             backgroundSize: "cover",
@@ -169,7 +169,7 @@ const Hero = forwardRef((props, ref) => {
             height: "100%",
           }}
         >
-          <div className="absolute top-0 left-0 min-h-[28rem] w-full">
+          <div className="absolute top-0 left-0 w-full">
             <img
               ref={imgRef}
               className="h-full w-full object-cover"

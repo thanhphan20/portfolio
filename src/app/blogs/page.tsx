@@ -38,7 +38,7 @@ export default function Blogs() {
       post.title.toLowerCase().includes(keyword)
     );
     setFilteredPosts(filtered);
-    setCurrentPage(1); // Reset to the first page
+    setCurrentPage(1);
   };
 
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
@@ -136,7 +136,7 @@ export default function Blogs() {
         <select
           value={sortBy}
           onChange={handleSortChange}
-          className="mt-4 p-2 border text-[#fff] bg-transparent border-gray-300 rounded-md"
+          className="custom-select mt-4 p-2 border text-[#fff] bg-transparent border-gray-300 rounded-md"
         >
           <option value="date">Sort by Date</option>
           <option value="title">Sort by Title</option>
@@ -191,8 +191,10 @@ export default function Blogs() {
           <button
             key={index}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-1 px-3 py-1 rounded-md text-[#141414] ${
-              currentPage === index + 1 ? "bg-gray-300" : "bg-gray-100"
+            className={`mx-1 px-3 py-1 rounded-md border ${
+              currentPage === index + 1
+                ? "bg-[#fff] text-[#141414]"
+                : "bg-transparent text-[#fff]"
             }`}
           >
             {index + 1}

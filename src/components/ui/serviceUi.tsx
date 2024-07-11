@@ -53,15 +53,15 @@ export default function ServiceUi({
   return (
     <div
       ref={serviceUi}
-      className="sticky top-0 border-t border-t-secondary-300 bg-[#141414]"
-      style={{ top: `calc(20vh + ${i * 5.75}rem)`,  marginBottom: `${(length === i + 1 ? 3.75 : (length - i) * 5.75)}rem` }}
+      className="sticky top-0 border-t border-t-secondary-300 h-[40vh] bg-[#141414]"
+      style={{ top: `calc(20vh + ${i * 5.75}rem)`,  marginBottom: `${((length - i) * 5.75)}rem` }}
     >
       <div className="flex flex-row items-start gap-48 relative origin-top h-full w-full rounded-2xl">
         <div className="space-y-6 w-1/2">
           <div className="space-y-3 2xl:space-y-10">
             <h3
               ref={heading}
-              className="text-heading-3 2xl:text-7xl font-semibold leading-tight  translate-y-10 opacity-0"
+              className="2xl:text-6xl font-semibold leading-tight translate-y-10 opacity-0"
             >
               {title}
             </h3>
@@ -81,7 +81,7 @@ export default function ServiceUi({
             return (
               <p
                 key={index}
-                className="font-general text-special 2xl:text-7xl  font-extrabold "
+                className="font-general text-special 2xl:text-6xl font-extrabold mb-8"
               >
                 {item}
               </p>

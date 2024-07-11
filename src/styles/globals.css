@@ -119,28 +119,28 @@ body::before {
 h1 {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   font-weight: 700;
 }
 
 h2 {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
   font-weight: 600;
 }
 
 h3 {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 1.125rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   font-weight: 500;
 }
 
 h4 {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 500;
 }
 
@@ -177,6 +177,43 @@ li {
   font-size: 14px;
   line-height: 1.5;
   color: #ffffff;
+}
+
+.notion-bulleted_list {
+  list-style-type: disc; /* Kiểu danh sách có dấu chấm */
+  margin-left: 20px; /* Khoảng cách lề trái */
+  padding-left: 10px; /* Khoảng cách padding trái */
+}
+
+.notion-numbered_list_item {
+  list-style-type: decimal; /* Kiểu danh sách có số thứ tự */
+  margin-left: 20px; /* Khoảng cách lề trái */
+  padding-left: 10px; /* Khoảng cách padding trái */
+}
+
+.notion-bulleted_list_item {
+  margin-bottom: 5px; /* Khoảng cách dưới giữa các mục */
+  padding-left: 10px; /* Khoảng cách padding trái */
+}
+
+.notion-table {
+  width: 100%; /* Đặt chiều rộng bảng là 100% */
+  border-collapse: collapse; /* Gộp các đường viền bảng lại */
+  margin-bottom: 20px; /* Khoảng cách dưới bảng */
+}
+
+.notion-table_row {
+  border-bottom: 1px solid #ccc; /* Đường viền dưới của hàng bảng */
+}
+
+.notion-table_cell {
+  padding: 10px; /* Khoảng cách padding cho ô bảng */
+  border: 1px solid #ccc; /* Đường viền của ô bảng */
+  text-align: left; /* Canh trái nội dung */
+}
+
+.custom-select option {
+  color: #000;
 }
 
 .hljs-keyword,

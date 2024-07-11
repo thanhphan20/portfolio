@@ -15,10 +15,26 @@ export const notionClient = new Client({
 export const getPages = cache(async () => {
   const response = await notionClient.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
+    filter: {
+      and: [
+        {
+          property: "Status",
+          status: {
+            equals: "Done",
+          },
+        },
+      ],
+    },
+    // sorts: [
+    //   {
+    //     timestamp: 'last_edited_time',
+    //     direction: 'descending',
+    //   },
+    // ],
+    // start_cursor: undefined,
   });
 
   return response.results
-    .filter((page) => page.properties.Status.status.name === "Done")
     .map((page) => ({
       id: page.id,
       title: page.properties.Name.title[0].plain_text,
@@ -26,7 +42,7 @@ export const getPages = cache(async () => {
       slug: page.properties.Slug.rich_text[0].plain_text,
       techs: page.properties.Technology.multi_select,
       background: page.cover?.external.url,
-      date: format(new Date(page.last_edited_time), "do MMMM yyyy"),
+      date: format(new Date(page.created_time), "do MMMM yyyy"),
     }));
 });
 

@@ -144,7 +144,7 @@ const Contact = forwardRef((props, ref) => {
             <div className="text-body-2 2xl:text-3xl">
               <a
                 href="https://github.com/thanhphan20"
-                className="flex items-center mb-4"
+                className="flex w-fit gap-4 items-center mb-4"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -156,7 +156,7 @@ const Contact = forwardRef((props, ref) => {
               </a>
               <a
                 href="https://www.linkedin.com/in/cthanhphan/"
-                className="flex w-fit items-center mb-4"
+                className="flex w-fit gap-4 items-center mb-4"
                 target="_blank"
                 rel="noreferrer"
               >

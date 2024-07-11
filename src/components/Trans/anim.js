@@ -5,7 +5,7 @@ export const text = {
     enter: {
         opacity: 0,
         top: -100,
-        transition: { duration: 1.5, delay: 0.75, ease: [0.76, 0, 0.24, 1] },
+        transition: { duration: .75, delay: .35, ease: [0.76, 0, 0.24, 1] },
         transitionEnd: { top: "47.5%" }
     },
     exit: {
@@ -22,11 +22,11 @@ export const curve = (initialPath, targetPath) => {
         },
         enter: {
             d: targetPath,
-            transition: { duration: 1.5, delay: 0.75, ease: [0.76, 0, 0.24, 1] }
+            transition: { duration: .75, delay: .35, ease: [0.76, 0, 0.24, 1] }
         },
         exit: {
             d: initialPath,
-            transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1] }
+            transition: { duration: .75, ease: [.36, 0, 0.24, 1] }
         }
     }
 }
@@ -41,7 +41,7 @@ export const translate = {
         top: "-100vh",
         opacity: 1,
         zIndex: 2,
-        transition: { duration: 1.5, delay: 0.75, ease: [0.76, 0, 0.24, 1] },
+        transition: { duration: .75, delay: .35, ease: [0.76, 0, 0.24, 1] },
         transitionEnd: {
             top: "100vh"
         }
@@ -50,6 +50,6 @@ export const translate = {
         top: "-300px",
         opacity: 0,
         zIndex: 10,
-        transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1] }
+        transition: { duration: .75, ease: [.36, 0, 0.24, 1] }
     }
 }

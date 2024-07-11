@@ -14,7 +14,7 @@ const Services = forwardRef((props, ref) => {
       title: "my expertises.",
       description:
         "I focus on all things design and web related. With each of my services, my goal is to deliver an impactful and elevating digital experience for everyone.",
-      items: ["Web Development", "Web Design", "UI/UX Design"],
+      items: ["Development", "Design", "UI/UX Design"],
     },
     {
       title: "my frontend stack.",
@@ -57,6 +57,7 @@ const Services = forwardRef((props, ref) => {
       {serviceUis.map((service, i) => {
         return (
           <ServiceUi
+            key={i}
             title={service.title}
             description={service.description}
             items={service.items}

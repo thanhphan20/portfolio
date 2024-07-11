@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { menuSlide } from "./anim";
 import Link from "./link";
+import { title } from "process";
 
 const navItems = [
   {
@@ -13,6 +14,10 @@ const navItems = [
   {
     title: "Blogs",
     href: "/blogs",
+  },
+  {
+    title: "About",
+    href: "/about",
   },
   {
     title: "Projects",

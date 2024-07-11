@@ -8,6 +8,8 @@ import styles from "./style.module.scss";
 const routes = {
   "/": "Home",
   "/blogs": "Blogs",
+  "/about": "About",
+  "/project": "Projects",
 };
 
 const anim = (variants: string) => {
