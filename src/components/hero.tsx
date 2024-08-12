@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { useRef, useEffect, forwardRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import InfiniteHorizontalScroll from "@/components/ui/infinite";
-import { motion, useTransform } from "framer-motion";
 
 const Hero = forwardRef((props, ref) => {
   const imgRef = useRef(null);
