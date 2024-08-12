@@ -3,6 +3,7 @@ import { NotionRenderer } from "@notion-render/client";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import cheerio from "cheerio";
+import Image from "next/image";
 
 //Plugins
 import hljsPlugin from "@notion-render/hljs-plugin";
@@ -51,9 +52,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <main className="flex flex-col justify-center px-[10%]">
       <div className="pb-4 dark:border-gray-600">
-        <figure className="rounded shadow dark:shadow-none overflow-hidden max-h-96 max-w-full">
-          <img
+        <figure className="relative rounded shadow dark:shadow-none overflow-hidden h-96 w-full max-h-96 max-w-full">
+          <Image
             src={post.cover.external.url}
+            alt={params.slug}
+            fill
+            priority
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full h-full object-cover"
           />
         </figure>
