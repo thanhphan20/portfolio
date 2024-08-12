@@ -25,13 +25,6 @@ export const getPages = cache(async () => {
         },
       ],
     },
-    // sorts: [
-    //   {
-    //     timestamp: 'last_edited_time',
-    //     direction: 'descending',
-    //   },
-    // ],
-    // start_cursor: undefined,
   });
 
   return response.results
