@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Blogs() {
   const [posts, setPosts] = useState([]);
@@ -153,9 +154,13 @@ export default function Blogs() {
               className="block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300"
             >
               <div className="relative">
-                <figure className="pointer-events-none shadow dark:shadow-none overflow-hidden rounded max-h-48 max-w-full">
-                  <img
+                <figure className="relative pointer-events-none shadow dark:shadow-none overflow-hidden rounded w-full h-48 max-h-48 max-w-full">
+                  <Image
                     src={post.background}
+                    alt={post.slug}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="w-full h-full object-cover"
                   />
                 </figure>
